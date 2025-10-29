@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <HealthVisualizer>k__BackingField: {fileID: 5783033320382523163}
+  <BillBoard>k__BackingField: {fileID: 3084662804643115935}
 --- !u!114 &8141815135125204694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +445,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5671470907327757385}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -453,7 +454,7 @@ RectTransform:
   - {fileID: 8744313220778828131}
   - {fileID: 5434984370976025641}
   m_Father: {fileID: 7467858985794122438}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -536,6 +537,7 @@ GameObject:
   - component: {fileID: 6082231319347961083}
   - component: {fileID: 1292860061605812250}
   - component: {fileID: 6619162901666216018}
+  - component: {fileID: 3084662804643115935}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -626,6 +628,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3084662804643115935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632396338742828443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fc48c7e726d7f41a11a157c5d77b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7994710869318896678
 GameObject:
   m_ObjectHideFlags: 0

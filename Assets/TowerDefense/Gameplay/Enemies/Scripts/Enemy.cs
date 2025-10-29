@@ -1,11 +1,14 @@
+using TowerDefense.Gameplay.Scripts.ObjectPooling;
+using TowerDefense.Gameplay.UI;
 using TowerDefense.Scripts;
 using UnityEngine;
 
 namespace TowerDefense.Gameplay.Enemies.Scripts
 {
-    public class Enemy : MonoBehaviour, IInitializable
+    public class Enemy : MonoBehaviour, IInitializable, IPoolable
     {
         [field: SerializeField] public HealthVisualizer HealthVisualizer { get; private set; }
+        [field: SerializeField] public BillBoard BillBoard { get; private set; }
         public Movement Movement { get; private set; }
         public HealthSystem HealthSystem { get; private set; }
         public DeathHandler DeathHandler { get; private set; }
@@ -19,6 +22,12 @@ namespace TowerDefense.Gameplay.Enemies.Scripts
             DeathHandler = GetComponent<DeathHandler>();
             DeathHandler.Initialize();
             HealthVisualizer.Initialize();
+            BillBoard.Initialize();
+        }
+
+        public void Reset()
+        {
+            HealthSystem.Initialize();
         }
     }
 }

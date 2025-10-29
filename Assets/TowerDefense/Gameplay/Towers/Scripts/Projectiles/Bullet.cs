@@ -1,5 +1,7 @@
 using System.Collections;
 using TowerDefense.Gameplay.Enemies.Scripts;
+using TowerDefense.Gameplay.Scripts.ObjectPooling;
+using TowerDefense.Scripts;
 using UnityEngine;
 
 namespace TowerDefense.Gameplay.Towers.Scripts.Projectiles
@@ -12,7 +14,13 @@ namespace TowerDefense.Gameplay.Towers.Scripts.Projectiles
 
         private int _damage;
         private Coroutine _disposeCoroutine;
-        
+        private Pool _pool;
+
+        public override void Initialize()
+        {
+            _pool = ServiceLocator.GetService<Pool>();
+        }
+
         public override void Shoot(Vector3 destinationPosition, float speed, int damage)
         {
             _rb.AddForce((destinationPosition - _transform.position) * speed);
@@ -41,7 +49,12 @@ namespace TowerDefense.Gameplay.Towers.Scripts.Projectiles
 
         private void DisposeBullet()
         {
-            gameObject.SetActive(false);
+            _pool.PutToPool(gameObject, this);
+        }
+
+        public override void Reset()
+        {
+            _rb.linearVelocity = Vector3.zero;
         }
     }
 }

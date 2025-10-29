@@ -9,5 +9,6 @@ namespace TowerDefense.Gameplay.Environment.Scripts.EnemySpawner
     {
         [field: SerializeField] public List<EnemyCount> Enemies { get; private set; }
         [field: SerializeField] public float SpawnDelay { get; private set; }
+        [field: SerializeField] public float DelayAfterWave { get; private set; }
     }
 }

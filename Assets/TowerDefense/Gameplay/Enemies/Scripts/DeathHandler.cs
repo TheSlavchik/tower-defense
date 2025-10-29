@@ -1,3 +1,4 @@
+using TowerDefense.Gameplay.Scripts.ObjectPooling;
 using TowerDefense.Scripts;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,10 +12,12 @@ namespace TowerDefense.Gameplay.Enemies.Scripts
         [SerializeField] private HealthSystem _healthSystem;
 
         private Enemy _enemy;
+        private Pool _pool;
         
         public void Initialize()
         {
             _healthSystem.OnHealthChanged.AddListener(CheckDeath);
+            _pool = ServiceLocator.GetService<Pool>();
             _enemy = GetComponent<Enemy>();
         }
 
@@ -29,6 +32,7 @@ namespace TowerDefense.Gameplay.Enemies.Scripts
         private void Death()
         {
             gameObject.SetActive(false);
+            _pool.PutToPool(gameObject, _enemy);
             OnDeath.Invoke(_enemy);
         }
     }

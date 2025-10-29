@@ -7,10 +7,12 @@ namespace TowerDefense.Gameplay.Towers.Scripts
     {
         [field: SerializeField] public ShootHandler ShootHandler { get; private set; }
         [field: SerializeField] public EnemiesChecker EnemiesChecker { get; private set; }
+        [field: SerializeField] public Rotator Rotator { get; private set; }
         
         public void Initialize()
         {
             ShootHandler.Initialize();
+            Rotator.Initialize();
         }
     }
 }

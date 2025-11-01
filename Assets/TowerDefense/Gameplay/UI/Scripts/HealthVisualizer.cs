@@ -1,8 +1,9 @@
+using TowerDefense.Gameplay.Scripts.Entities;
 using TowerDefense.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TowerDefense.Gameplay.Enemies.Scripts
+namespace TowerDefense.Gameplay.UI.Scripts
 {
     public class HealthVisualizer : MonoBehaviour, IInitializable
     {

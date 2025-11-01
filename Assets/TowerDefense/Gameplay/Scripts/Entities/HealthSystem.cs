@@ -2,7 +2,7 @@ using TowerDefense.Scripts;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TowerDefense.Gameplay.Enemies.Scripts
+namespace TowerDefense.Gameplay.Scripts.Entities
 {
     public class HealthSystem : MonoBehaviour, IInitializable
     {

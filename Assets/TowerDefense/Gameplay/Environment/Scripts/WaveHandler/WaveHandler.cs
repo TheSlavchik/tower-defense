@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using TowerDefense.Gameplay.Environment.Scripts.EnemySpawner;
 using TowerDefense.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TowerDefense.Gameplay.Environment.Scripts.WaveHandler
 {
     public class WaveHandler : MonoBehaviour, IInitializable
     {
+        public UnityEvent<int> OnWaveStarted = new();
+        
         [SerializeField] private List<SpawnLayer> _spawnLayers;
         
         private Spawner _spawner;
@@ -23,6 +26,8 @@ namespace TowerDefense.Gameplay.Environment.Scripts.WaveHandler
 
         public void StartWave()
         {
+            OnWaveStarted.Invoke(_currentWave);
+            
             if (_waitCoroutine != null)
             {
                 StopCoroutine(_waitCoroutine);    
@@ -41,7 +46,7 @@ namespace TowerDefense.Gameplay.Environment.Scripts.WaveHandler
         {
             if (_currentWave < _spawnLayers.Count)
             {
-                yield return new WaitForSeconds(_spawnLayers[_currentWave].DelayAfterWave);
+                yield return new WaitForSeconds(_spawnLayers[_currentWave].DelayBeforeWave);
                 StartWave();
             }
         }

@@ -1,7 +1,7 @@
 using TowerDefense.Scripts;
 using UnityEngine;
 
-namespace TowerDefense.Gameplay.UI
+namespace TowerDefense.Gameplay.UI.Scripts
 {
     public class BillBoard : MonoBehaviour, IInitializable
     {

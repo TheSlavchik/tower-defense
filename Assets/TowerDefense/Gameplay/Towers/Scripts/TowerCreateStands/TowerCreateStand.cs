@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using TowerDefense.Gameplay.Scripts.ClickSystem;
 using TowerDefense.Scripts;
 using UnityEngine;
 
 namespace TowerDefense.Gameplay.Towers.Scripts.TowerCreateStands
 {
-    public class TowerCreateStand : MonoBehaviour, IInitializable
+    public class TowerCreateStand : MonoBehaviour, IInitializable, IClickable
     {
         [field:SerializeField] public List<Tower> Towers { get; private set; }
         [SerializeField] private Transform _spawnTransform;
@@ -21,10 +22,11 @@ namespace TowerDefense.Gameplay.Towers.Scripts.TowerCreateStands
         public void CreateTower(Tower prefab)
         {
             _createdTower = Instantiate(prefab, _spawnTransform.position, Quaternion.identity);
+            _createdTower.Initialize();
             gameObject.SetActive(false);
         }
 
-        private void OnMouseDown()
+        public void HandleClick()
         {
             if (_isInterfaceOpened)
             {
@@ -34,6 +36,8 @@ namespace TowerDefense.Gameplay.Towers.Scripts.TowerCreateStands
             {
                 _interface.Show();
             }
+
+            _isInterfaceOpened = !_isInterfaceOpened;
         }
     }
 }

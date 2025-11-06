@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3bcd31-4a3a-48fb-af4b-d0dac85c1c25" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tower-defense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tower-defense/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Enemies/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Enemies/Prefabs/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Enemies/Scripts/DeathHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Enemies/Scripts/DeathHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Enemies/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Enemies/Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Environment/Scripts/WaveHandler/WaveHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Environment/Scripts/WaveHandler/WaveHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Prefabs/Towers/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Prefabs/Towers/Tower.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/Tower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/TowerCreateStands/TowerButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/TowerCreateStands/TowerButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/TowerCreateStands/TowerCreateInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/TowerCreateStands/TowerCreateInterface.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/TowerCreateStands/TowerCreateStand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Towers/Scripts/TowerCreateStands/TowerCreateStand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TowerDefense/Scripts/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefense/Scripts/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +27,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Environment/Scripts/Money/Scripts/Bank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TowerDefense/Gameplay/Scripts/ClickSystem/ClickCatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TowerDefense/Gameplay/UI/Scripts/NextWaveHandler.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -25,24 +40,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.55f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\My\Programs\Unity Editors\6000.0.55f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\My\Development\Projects\tower-defense -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\My\Development\Projects\tower-defense" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -53,7 +68,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.55f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\My\Programs\Unity Editors\6000.0.55f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\My\Development\Projects\tower-defense -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\My\Development\Projects\tower-defense" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -101,6 +116,8 @@
       <updated>1761994340046</updated>
       <workItem from="1761994342660" duration="703000" />
       <workItem from="1762056670815" duration="2626000" />
+      <workItem from="1762357999210" duration="3297000" />
+      <workItem from="1762449788191" duration="3873000" />
     </task>
     <servers />
   </component>

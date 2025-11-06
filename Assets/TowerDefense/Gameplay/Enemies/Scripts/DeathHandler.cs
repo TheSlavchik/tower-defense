@@ -32,9 +32,11 @@ namespace TowerDefense.Gameplay.Enemies.Scripts
         
         private void Death()
         {
+            _healthSystem.OnHealthChanged.RemoveListener(CheckDeath);
             gameObject.SetActive(false);
             _pool.PutToPool(gameObject, _enemy);
             OnDeath.Invoke(_enemy);
+            print("Death?");
         }
     }
 }

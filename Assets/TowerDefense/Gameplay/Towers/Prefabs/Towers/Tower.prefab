@@ -190,9 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0a6db8683cb6c44ad83d6c97a7810e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <BuildCost>k__BackingField: 15
   <ShootHandler>k__BackingField: {fileID: 7944270716092725221}
   <EnemiesChecker>k__BackingField: {fileID: 6453038672293550505}
   <Rotator>k__BackingField: {fileID: 1483652879453014124}
+  <Icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &7944270716092725221
 MonoBehaviour:
   m_ObjectHideFlags: 0

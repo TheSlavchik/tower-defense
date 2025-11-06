@@ -10,6 +10,7 @@ namespace TowerDefense.Gameplay.Environment.Scripts.WaveHandler
     public class WaveHandler : MonoBehaviour, IInitializable
     {
         public UnityEvent<int> OnWaveStarted = new();
+        public UnityEvent<float> OnWaveSpawned = new();
         
         [SerializeField] private List<SpawnLayer> _spawnLayers;
         
@@ -46,6 +47,7 @@ namespace TowerDefense.Gameplay.Environment.Scripts.WaveHandler
         {
             if (_currentWave < _spawnLayers.Count)
             {
+                OnWaveSpawned.Invoke(_spawnLayers[_currentWave].DelayBeforeWave);
                 yield return new WaitForSeconds(_spawnLayers[_currentWave].DelayBeforeWave);
                 StartWave();
             }

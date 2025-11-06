@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TowerDefense.Scripts
 {
-    public class EntryPoint : MonoBehaviour
+    public class EntryPoint : MonoBehaviour, IInitializable
     {
         [SerializeField] private bool _initializeOnAwake;
         [SerializeReference] private List<GameObject> _initializableObjects;

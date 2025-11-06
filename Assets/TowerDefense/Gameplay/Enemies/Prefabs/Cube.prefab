@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57f76df5dcea4f42a0745537b3b4b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyCost: 5
   <HealthVisualizer>k__BackingField: {fileID: 5783033320382523163}
   <BillBoard>k__BackingField: {fileID: 3084662804643115935}
 --- !u!114 &8141815135125204694

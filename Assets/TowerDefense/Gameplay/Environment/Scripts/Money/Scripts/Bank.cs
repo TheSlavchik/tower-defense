@@ -14,7 +14,6 @@ namespace TowerDefense.Gameplay.Environment.Scripts.Money.Scripts
 
         public void Initialize()
         {
-            print("W");
             AddMoney(_startMoney);
         }
 
@@ -23,7 +22,6 @@ namespace TowerDefense.Gameplay.Environment.Scripts.Money.Scripts
             if (money >= 0)
             {
                 _money += money;
-                print($"Add money {money}, {_money}");   
             }
             
             OnMoneyChanged.Invoke(_money);
@@ -43,7 +41,6 @@ namespace TowerDefense.Gameplay.Environment.Scripts.Money.Scripts
             }
 
             _money -= money;
-            print($"GetMoney {money}, {_money}");
             
             OnMoneyChanged.Invoke(_money);
             

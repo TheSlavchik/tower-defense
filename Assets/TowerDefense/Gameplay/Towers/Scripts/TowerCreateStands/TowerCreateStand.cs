@@ -23,7 +23,8 @@ namespace TowerDefense.Gameplay.Towers.Scripts.TowerCreateStands
         {
             _createdTower = Instantiate(prefab, _spawnTransform.position, Quaternion.identity);
             _createdTower.Initialize();
-            gameObject.SetActive(false);
+            _interface.Hide();
+            enabled = false;
         }
 
         public void HandleClick()

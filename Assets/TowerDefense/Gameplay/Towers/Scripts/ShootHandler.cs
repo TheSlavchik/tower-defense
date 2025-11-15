@@ -17,24 +17,27 @@ namespace TowerDefense.Gameplay.Towers.Scripts
         [SerializeField] private Projectile _projectile;
         [SerializeField] private EnemiesChecker _enemiesChecker;
         [SerializeField] private Transform _shootPoint;
+        [SerializeField] private Vector3 _targetPositionOffset;
 
         private bool _isReloading;
         private Pool _pool;
+        private Vector3 _targetPosition;
 
         public void Initialize()
         {
             _enemiesChecker.OnHaveTarget.AddListener(Shoot);
             _pool = ServiceLocator.GetService<Pool>();
         }
-        
-        public void Shoot(Transform target)
+
+        private void Shoot(Transform target)
         {
             if (!_isReloading)
             {
                 Projectile projectile = _pool.GetFromPool(_projectile.gameObject).GetComponent<Projectile>();
                 projectile.Initialize();
                 projectile.transform.position = _shootPoint.position;
-                projectile.Shoot(target.position, _projectileSpeed, _damage);
+                _targetPosition = target.position + _targetPositionOffset;
+                projectile.Shoot(_targetPosition, _projectileSpeed, _damage);
                 StartCoroutine(Reload());
             }
         }

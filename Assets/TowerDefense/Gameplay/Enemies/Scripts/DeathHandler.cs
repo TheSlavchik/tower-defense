@@ -36,7 +36,6 @@ namespace TowerDefense.Gameplay.Enemies.Scripts
             gameObject.SetActive(false);
             _pool.PutToPool(gameObject, _enemy);
             OnDeath.Invoke(_enemy);
-            print("Death?");
         }
     }
 }

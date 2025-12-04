@@ -11,13 +11,22 @@ namespace TowerDefense.Gameplay.Towers.Scripts
     {
         public UnityEvent<Transform> OnHaveTarget = new();
 
+        [SerializeField] private SphereCollider _collider;
+        
         private List<Transform> _targets = new();
 
         private void FixedUpdate()
         {
             if (_targets.Count > 0)
             {
-                OnHaveTarget.Invoke(_targets[0]);
+                if (_targets[0].gameObject.activeSelf)
+                {
+                    OnHaveTarget.Invoke(_targets[0]);
+                }
+                else
+                {
+                    _targets.RemoveAt(0);
+                }
             }
         }
 
@@ -27,7 +36,6 @@ namespace TowerDefense.Gameplay.Towers.Scripts
             if (enemy != null)
             {
                 _targets.Add(other.transform);
-                enemy.DeathHandler.OnDeath.AddListener(RemoveDeathEnemy);
             }
         }
 
@@ -37,7 +45,6 @@ namespace TowerDefense.Gameplay.Towers.Scripts
             if (enemy != null)
             {
                 _targets.Remove(other.transform);
-                enemy.DeathHandler.OnDeath.RemoveListener(RemoveDeathEnemy);
             }
         }
 
@@ -45,6 +52,17 @@ namespace TowerDefense.Gameplay.Towers.Scripts
         {
             _targets.Remove(enemy.transform);
             enemy.DeathHandler.OnDeath.RemoveListener(RemoveDeathEnemy);
+        }
+
+        public void AddRadius(float addRadius)
+        {
+            if (addRadius < 0)
+            {
+                print($"Incorrect radius {addRadius}");
+                return;
+            }
+
+            _collider.radius += addRadius;
         }
     }
 }

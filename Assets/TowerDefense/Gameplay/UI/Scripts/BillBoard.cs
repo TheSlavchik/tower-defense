@@ -14,7 +14,12 @@ namespace TowerDefense.Gameplay.UI.Scripts
             _camera = ServiceLocator.GetService<Camera>().transform;
         }
 
-        private void Update()
+        protected virtual void Update()
+        {
+            Look();
+        }
+
+        protected void Look()
         {
             _transform.LookAt(_camera);
         }

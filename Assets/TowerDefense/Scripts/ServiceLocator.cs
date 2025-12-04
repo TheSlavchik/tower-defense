@@ -9,7 +9,7 @@ namespace TowerDefense.Scripts
         [SerializeField] private List<GameObject> _services;
 
         private static List<GameObject> _servicesArr;
-        private static Dictionary<Type, GameObject> _servicesDict = new();
+        private static readonly Dictionary<Type, GameObject> _servicesDict = new();
 
         public void Initialize()
         {

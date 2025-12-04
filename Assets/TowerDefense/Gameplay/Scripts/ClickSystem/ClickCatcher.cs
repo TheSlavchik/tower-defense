@@ -1,10 +1,13 @@
 using TowerDefense.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TowerDefense.Gameplay.Scripts.ClickSystem
 {
     public class ClickCatcher : MonoBehaviour, IInitializable
     {
+        public static UnityEvent OnEmptyClick = new();
+        
         [SerializeField] private LayerMask _clickableLayers;
         
         private Camera _camera;
@@ -12,7 +15,6 @@ namespace TowerDefense.Gameplay.Scripts.ClickSystem
         public void Initialize()
         {
             _camera = ServiceLocator.GetService<Camera>();
-            
         }
 
         private void Update()
@@ -32,6 +34,15 @@ namespace TowerDefense.Gameplay.Scripts.ClickSystem
                 IClickable clickable = hit.transform.GetComponent<IClickable>();
 
                 clickable?.HandleClick();
+
+                if (clickable == null)
+                {
+                    OnEmptyClick.Invoke();
+                }
+            }
+            else
+            {
+                OnEmptyClick.Invoke();
             }
         }
     }

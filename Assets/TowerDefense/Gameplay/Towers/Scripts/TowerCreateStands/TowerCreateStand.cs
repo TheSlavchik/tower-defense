@@ -9,36 +9,54 @@ namespace TowerDefense.Gameplay.Towers.Scripts.TowerCreateStands
     {
         [field:SerializeField] public List<Tower> Towers { get; private set; }
         [SerializeField] private Transform _spawnTransform;
-        [SerializeField] private TowerCreateInterface _interface;
+        [SerializeField] private TowerCreateInterface _createInterface;
+        [SerializeField] private UpgradeInterface _upgradeInterface;
 
         private Tower _createdTower;
+        private UpgradeHandler _upgradeHandler;
         private bool _isInterfaceOpened;
+        private bool _isTowerCreated;
         
         public void Initialize()
         {
-            _interface.Initialize();
+            _createInterface.Initialize();
+            ClickCatcher.OnEmptyClick.AddListener(Hide);
         }
 
         public void CreateTower(Tower prefab)
         {
             _createdTower = Instantiate(prefab, _spawnTransform.position, Quaternion.identity);
             _createdTower.Initialize();
-            _interface.Hide();
-            enabled = false;
+            _createInterface.Hide();
+            _isTowerCreated = true;
+            _upgradeInterface.SetupInterface(_createdTower.UpgradeHandler);
         }
 
         public void HandleClick()
         {
-            if (_isInterfaceOpened)
+            if (_isTowerCreated)
             {
-                _interface.Hide();
+                _upgradeInterface.Enable();
             }
             else
             {
-                _interface.Show();
-            }
+                if (_isInterfaceOpened)
+                {
+                    _createInterface.Hide();
+                }
+                else
+                {
+                    _createInterface.Show();
+                }
 
-            _isInterfaceOpened = !_isInterfaceOpened;
+                _isInterfaceOpened = !_isInterfaceOpened;
+            }
+        }
+
+        private void Hide()
+        {
+            _upgradeInterface.Hide();
+            _createInterface.Hide();
         }
     }
 }

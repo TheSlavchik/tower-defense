@@ -11,17 +11,18 @@ namespace TowerDefense.Gameplay.Towers.Scripts
     {
         public UnityEvent OnShoot = new();
         
-        [SerializeField] private int _damage;
+        [SerializeField] protected int _damage;
         [SerializeField] private float _reloadDelay;
-        [SerializeField] private float _projectileSpeed;
-        [SerializeField] private Projectile _projectile;
+        [SerializeField] protected float _projectileSpeed;
+        [SerializeField] protected Projectile _projectile;
         [SerializeField] private EnemiesChecker _enemiesChecker;
-        [SerializeField] private Transform _shootPoint;
-        [SerializeField] private Vector3 _targetPositionOffset;
+        [SerializeField] protected Transform _shootPoint;
+        [SerializeField] protected Vector3 _targetPositionOffset;
+        [SerializeField] protected float _shootAhead;
 
-        private bool _isReloading;
-        private Pool _pool;
-        private Vector3 _targetPosition;
+        protected bool _isReloading;
+        protected Pool _pool;
+        protected Vector3 _targetPosition;
 
         public void Initialize()
         {
@@ -29,26 +30,62 @@ namespace TowerDefense.Gameplay.Towers.Scripts
             _pool = ServiceLocator.GetService<Pool>();
         }
 
-        private void Shoot(Transform target)
+        protected virtual void Shoot(Transform target)
         {
             if (!_isReloading)
             {
                 Projectile projectile = _pool.GetFromPool(_projectile.gameObject).GetComponent<Projectile>();
                 projectile.Initialize();
-                projectile.transform.position = _shootPoint.position;
-                _targetPosition = target.position + _targetPositionOffset;
+
+                Transform projectileTransform = projectile.transform;
+                
+                projectileTransform.rotation = _shootPoint.rotation;
+                projectileTransform.position = _shootPoint.position;
+                _targetPosition = target.position + _targetPositionOffset + target.forward * _shootAhead;
                 projectile.Shoot(_targetPosition, _projectileSpeed, _damage);
                 StartCoroutine(Reload());
+                OnShoot.Invoke();
             }
         }
 
-        private IEnumerator Reload()
+        protected IEnumerator Reload()
         {
             _isReloading = true;
             
             yield return new WaitForSeconds(_reloadDelay);
 
             _isReloading = false;
+        }
+
+        public void AddDamage(int damage)
+        {
+            if (damage >= 0)
+            {
+                _damage += damage;
+            }
+            else
+            {
+                print($"Incorrect damage {damage}");
+            }
+        }
+
+        public void RemoveReloadDelay(float delay)
+        {
+            if (delay >= 0)
+            {
+                if (_reloadDelay > delay)
+                {
+                    _reloadDelay -= delay;
+                }
+                else
+                {
+                    print($"To big remove delay {delay}");
+                }
+            }
+            else
+            {
+                print($"Incorrect delay {delay}");
+            }
         }
     }
 }

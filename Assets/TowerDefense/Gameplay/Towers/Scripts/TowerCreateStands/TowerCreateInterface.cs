@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TowerDefense.Gameplay.Scripts.ClickSystem;
 using TowerDefense.Gameplay.UI.Scripts;
 using TowerDefense.Scripts;
 using UnityEngine;
@@ -7,7 +8,7 @@ namespace TowerDefense.Gameplay.Towers.Scripts.TowerCreateStands
 {
     public class TowerCreateInterface : MonoBehaviour, IInitializable
     {
-        [SerializeField] private GameObject _interface;
+        [SerializeField] private GameObject _createInterface;
         [SerializeField] private BillBoard _billBoard;
         [SerializeField] private Transform _buttonsParent;
         [SerializeField] private TowerButton _towerButtonPrefab;
@@ -34,12 +35,12 @@ namespace TowerDefense.Gameplay.Towers.Scripts.TowerCreateStands
         
         public void Show()
         {
-            _interface.SetActive(true);
+            _createInterface.SetActive(true);
         }
 
         public void Hide()
         {
-            _interface.SetActive(false);
+            _createInterface.SetActive(false);
         }
     }
 }

@@ -65,8 +65,11 @@ namespace TowerDefense.Gameplay.Towers.Scripts.Projectiles
 
         private void Explode()
         {
+<<<<<<< Updated upstream
             print("EXPLODE!");
             
+=======
+>>>>>>> Stashed changes
             Collider[] hitColliders = Physics.OverlapSphere(_transform.position, _explodeRadius);
 
             foreach (var explodedObject in hitColliders)

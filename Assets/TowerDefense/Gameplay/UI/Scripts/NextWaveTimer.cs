@@ -1,3 +1,4 @@
+using System.Collections;
 using TowerDefense.Gameplay.Environment.Scripts.WaveHandler;
 using TowerDefense.Scripts;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace TowerDefense.Gameplay.UI.Scripts
     public class NextWaveTimer : MonoBehaviour, IInitializable
     {
         [SerializeField] private Slider _slider;
+        [SerializeField] private float _timeToShow;
 
         private WaveHandler _waveHandler;
         
@@ -26,9 +28,17 @@ namespace TowerDefense.Gameplay.UI.Scripts
 
         private void Show(float time)
         {
-            _slider.gameObject.SetActive(true);
-            _slider.maxValue = time;
+            _slider.maxValue = _timeToShow;
             _slider.value = 0;
+
+            StartCoroutine(ShowCoroutine(time - _timeToShow));
+        }
+
+        private IEnumerator ShowCoroutine(float timeBeforeShow)
+        {
+            yield return new WaitForSeconds(timeBeforeShow);
+            
+            _slider.gameObject.SetActive(true);
         }
         
         private void Update()

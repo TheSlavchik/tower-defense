@@ -53,19 +53,33 @@ MonoBehaviour:
   m_AdditionalLightsShadowResolutionTierHigh: 1024
   m_ReflectionProbeBlending: 0
   m_ReflectionProbeBoxProjection: 0
+<<<<<<< Updated upstream
+=======
+  m_ReflectionProbeAtlas: 1
+>>>>>>> Stashed changes
   m_ShadowDistance: 50
   m_ShadowCascadeCount: 1
   m_Cascade2Split: 0.25
   m_Cascade3Split: {x: 0.1, y: 0.3}
   m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
+<<<<<<< Updated upstream
   m_CascadeBorder: 0.2
   m_ShadowDepthBias: 1
   m_ShadowNormalBias: 1
+=======
+  m_CascadeBorder: 0
+  m_ShadowDepthBias: 0
+  m_ShadowNormalBias: 0
+>>>>>>> Stashed changes
   m_AnyShadowsSupported: 1
   m_SoftShadowsSupported: 1
   m_ConservativeEnclosingSphere: 1
   m_NumIterationsEnclosingSphere: 64
+<<<<<<< Updated upstream
   m_SoftShadowQuality: 2
+=======
+  m_SoftShadowQuality: 3
+>>>>>>> Stashed changes
   m_AdditionalLightsCookieResolution: 2048
   m_AdditionalLightsCookieFormat: 3
   m_UseSRPBatcher: 1
@@ -76,7 +90,11 @@ MonoBehaviour:
   m_DebugLevel: 0
   m_StoreActionsOptimization: 0
   m_UseAdaptivePerformance: 1
+<<<<<<< Updated upstream
   m_ColorGradingMode: 0
+=======
+  m_ColorGradingMode: 1
+>>>>>>> Stashed changes
   m_ColorGradingLutSize: 32
   m_AllowPostProcessAlphaOutput: 0
   m_UseFastSRGBLinearConversion: 0
@@ -91,7 +109,11 @@ MonoBehaviour:
   m_MaxPixelLights: 0
   m_ShadowAtlasResolution: 256
   m_VolumeFrameworkUpdateMode: 0
+<<<<<<< Updated upstream
   m_VolumeProfile: {fileID: 0}
+=======
+  m_VolumeProfile: {fileID: 11400000, guid: efb0b6e3f7cee1a4fbdc27699944e676, type: 2}
+>>>>>>> Stashed changes
   apvScenesData:
     obsoleteSceneBounds:
       m_Keys: []
@@ -129,6 +151,13 @@ MonoBehaviour:
   m_PrefilterScreenCoord: 0
   m_PrefilterNativeRenderPass: 0
   m_PrefilterUseLegacyLightmaps: 0
+<<<<<<< Updated upstream
+=======
+  m_PrefilterBicubicLightmapSampling: 0
+  m_PrefilterReflectionProbeBlending: 0
+  m_PrefilterReflectionProbeBoxProjection: 0
+  m_PrefilterReflectionProbeAtlas: 0
+>>>>>>> Stashed changes
   m_ShaderVariantLogLevel: 0
   m_ShadowCascades: 0
   m_Textures:

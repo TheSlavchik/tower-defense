@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!114 &-8719375769819120689
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -44,6 +45,8 @@ MonoBehaviour:
   saturation:
     m_OverrideState: 1
     m_Value: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-7742328368124810209
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -66,6 +69,7 @@ MonoBehaviour:
   balance:
     m_OverrideState: 1
     m_Value: 0
+<<<<<<< Updated upstream
 --- !u!114 &-7594967131806252301
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -133,6 +137,8 @@ MonoBehaviour:
   chromaticAbberationIntensity:
     m_OverrideState: 1
     m_Value: 0.5
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-6894082552966158773
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -148,6 +154,7 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
+<<<<<<< Updated upstream
     m_Value: 0
   tint:
     m_OverrideState: 1
@@ -348,6 +355,12 @@ MonoBehaviour:
   scale:
     m_OverrideState: 1
     m_Value: 1
+=======
+    m_Value: -10
+  tint:
+    m_OverrideState: 1
+    m_Value: 0
+>>>>>>> Stashed changes
 --- !u!114 &-1313989348267232654
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -369,10 +382,17 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
+<<<<<<< Updated upstream
     m_Value: 0
   smoothness:
     m_OverrideState: 1
     m_Value: 0.2
+=======
+    m_Value: 0.239
+  smoothness:
+    m_OverrideState: 1
+    m_Value: 0.363
+>>>>>>> Stashed changes
   rounded:
     m_OverrideState: 1
     m_Value: 0
@@ -391,7 +411,11 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
+<<<<<<< Updated upstream
     m_Value: 0
+=======
+    m_Value: 1
+>>>>>>> Stashed changes
   neutralHDRRangeReductionMode:
     m_OverrideState: 1
     m_Value: 2
@@ -430,6 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: -298430935771207200}
+<<<<<<< Updated upstream
   - {fileID: 7629680192524846726}
   - {fileID: -6894082552966158773}
   - {fileID: -1357325810838744374}
@@ -488,6 +513,14 @@ MonoBehaviour:
   blueOutBlueIn:
     m_OverrideState: 1
     m_Value: 100
+=======
+  - {fileID: -6894082552966158773}
+  - {fileID: 5708554791791289893}
+  - {fileID: -7742328368124810209}
+  - {fileID: -1313989348267232654}
+  - {fileID: 3645576579191340931}
+  - {fileID: 5494444000275891641}
+>>>>>>> Stashed changes
 --- !u!114 &3645576579191340931
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -677,6 +710,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+<<<<<<< Updated upstream
 --- !u!114 &4115036117352535619
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -699,6 +733,8 @@ MonoBehaviour:
   gain:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!114 &5494444000275891641
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -720,10 +756,17 @@ MonoBehaviour:
     m_Value: 0.9
   intensity:
     m_OverrideState: 1
+<<<<<<< Updated upstream
     m_Value: 0
   scatter:
     m_OverrideState: 1
     m_Value: 0.7
+=======
+    m_Value: 0.5
+  scatter:
+    m_OverrideState: 1
+    m_Value: 0.211
+>>>>>>> Stashed changes
   clamp:
     m_OverrideState: 1
     m_Value: 65472
@@ -765,6 +808,7 @@ MonoBehaviour:
   cropToFit:
     m_OverrideState: 1
     m_Value: 1
+<<<<<<< Updated upstream
 --- !u!114 &7629680192524846726
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -790,3 +834,5 @@ MonoBehaviour:
   clamp:
     m_OverrideState: 1
     m_Value: 0.05
+=======
+>>>>>>> Stashed changes

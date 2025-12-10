@@ -258,7 +258,11 @@ MonoBehaviour:
   <ShootHandler>k__BackingField: {fileID: 7944270716092725221}
   <EnemiesChecker>k__BackingField: {fileID: 6453038672293550505}
   <Rotator>k__BackingField: {fileID: 1483652879453014124}
+<<<<<<< Updated upstream
   <Icon>k__BackingField: {fileID: 21300000, guid: ef2e2e23fbb0f4bc6bf067faa833243a, type: 3}
+=======
+  <Icon>k__BackingField: {fileID: 21300000, guid: 53eab892f37284c40a91f0727f73fbb6, type: 3}
+>>>>>>> Stashed changes
   <UpgradeHandler>k__BackingField: {fileID: 790444573829752770}
   <ShootAnimator>k__BackingField: {fileID: 8877209272248165451}
 --- !u!114 &7944270716092725221
